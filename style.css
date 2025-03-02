@@ -1,0 +1,60 @@
+body {
+    background-color: white;
+}
+
+.container {
+    max-width: 600px; /* Reduced container size */
+    margin: auto;
+}
+
+.search-bar {
+    border-radius: 0px;
+    width: 100%; /* Adjusted to fit the container */
+    padding-right: 40px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px; /* Adjusted position */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.custom-card {
+    width: 100%; /* Adjusted to fit the container */
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    padding: 13px;
+}
+
+.card img {
+    max-height: 8rem;
+    object-fit: contain;
+}
+
+.btn-primary.btn-sm, .btn-secondary.btn-sm {
+    background: white;
+    border: 2px solid blue;
+    color: blue;
+    height: 2.5rem;
+    width: 6.7rem;
+}
+
+.btn-secondary.btn-sm {
+    margin-left: 1rem;
+}
+
+.mt-auto {
+    margin-left: 10px;
+}
