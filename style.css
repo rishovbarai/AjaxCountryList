@@ -36,10 +36,12 @@ body {
     flex: 1;
     display: flex;
     padding: 13px;
+    padding-bottom: 20px; /* Added padding under time */
 }
 
 .card img {
     max-height: 8rem;
+    width: 100%; /* Ensures all flags have the same width */
     object-fit: contain;
 }
 
