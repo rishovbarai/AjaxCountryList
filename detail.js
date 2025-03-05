@@ -27,24 +27,25 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
             const country = data[0];
-            countryName.textContent = country.name.common;
-            countryFlag.src = country.flags.png;
-            countrySmallFlag.src = country.flags.png;
-            countryNativeName.textContent = country.name.nativeName ? Object.values(country.name.nativeName)[0].common : 'N/A';
-            countryTld.textContent = country.tld ? country.tld.join(', ') : 'N/A';
-            countryCapital.textContent = country.capital ? country.capital.join(', ') : 'N/A';
-            countryRegion.textContent = country.region || 'N/A';
-            countrySubregion.textContent = country.subregion || 'N/A';
-            countryLanguages.textContent = country.languages ? Object.values(country.languages).join(', ') : 'N/A';
-            countryLatlng.textContent = country.latlng ? country.latlng.join(', ') : 'N/A';
-            countryArea.textContent = country.area ? country.area.toLocaleString() : 'N/A';
-            countryDemonyms.textContent = country.demonyms?.eng ? `${country.demonyms.eng.m} / ${country.demonyms.eng.f}` : 'N/A';
+            
+            if (countryName) countryName.textContent = country.name.common;
+            if (countryFlag) countryFlag.src = country.flags.png;
+            if (countrySmallFlag) countrySmallFlag.src = country.flags.png;
+            if (countryNativeName) countryNativeName.textContent = country.name.nativeName ? Object.values(country.name.nativeName)[0].common : 'N/A';
+            if (countryTld) countryTld.textContent = country.tld ? country.tld.join(', ') : 'N/A';
+            if (countryCapital) countryCapital.textContent = country.capital ? country.capital.join(', ') : 'N/A';
+            if (countryRegion) countryRegion.textContent = country.region || 'N/A';
+            if (countrySubregion) countrySubregion.textContent = country.subregion || 'N/A';
+            if (countryLanguages) countryLanguages.textContent = country.languages ? Object.values(country.languages).join(', ') : 'N/A';
+            if (countryLatlng) countryLatlng.textContent = country.latlng ? country.latlng.join(', ') : 'N/A';
+            if (countryArea) countryArea.textContent = country.area ? country.area.toLocaleString() : 'N/A';
+            if (countryDemonyms) countryDemonyms.textContent = country.demonyms?.eng ? `${country.demonyms.eng.m} / ${country.demonyms.eng.f}` : 'N/A';
             
             const currencyInfo = country.currencies ? Object.values(country.currencies)[0] : null;
-            countryCurrency.textContent = currencyInfo ? `${currencyInfo.name} (${currencyInfo.symbol || 'N/A'})` : 'N/A';
+            if (countryCurrency) countryCurrency.textContent = currencyInfo ? `${currencyInfo.name} (${currencyInfo.symbol || 'N/A'})` : 'N/A';
             
-            countryTime.textContent = country.timezones ? country.timezones[0] : 'N/A';
-            countryPopulation.textContent = country.population ? country.population.toLocaleString() : 'N/A';
+            if (countryTime) countryTime.textContent = country.timezones ? country.timezones[0] : 'N/A';
+            if (countryPopulation) countryPopulation.textContent = country.population ? country.population.toLocaleString() : 'N/A';
 
             if (country.borders && country.borders.length) {
                 const borderPromises = country.borders.map(border =>
@@ -89,6 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Error fetching country details:', error);
-            countryName.textContent = 'Error loading country details';
+            if (countryName) countryName.textContent = 'Error loading country details';
         });
 });

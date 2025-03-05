@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country Detail</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="detail-container mt-5">
         <!-- Section 1: Flag and Country Details -->
-        <div class="row mb-5">
+        <div class="d-flex mb-5">
             <!-- Big Flag -->
-            <div class="col-md-8">
-                <img id="country-flag" class="img-fluid" style="width: 100%; height: 500px; object-fit: contain; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" />
+            <div class="flex-fill">
+                <div class="position-relative">
+                    <img id="country-flag" class="img-fluid" style="width: 100%; height: 500px; object-fit: contain; border-radius: 8px;" />
+                    <h1 id="country-name" class="position-absolute" style="top: 10px; left: 10px; color: rgb(0, 0, 0);"></h1>
+                </div>
             </div>
             
             <!-- Country Details -->
             <div class="col-md-4">
-                <h1 id="country-name" class="mb-4"></h1>
-                <img id="country-small-flag" class="img-fluid mb-3" style="max-height: 200px; object-fit: cover;" />
                 <div class="country-info">
                     <p><strong>Native Name:</strong> <span id="country-native-name"></span></p>
-                    <p><strong>Top-Level Domain:</strong> <span id="country-tld"></span></p>
                     <p><strong>Capital:</strong> <span id="country-capital"></span></p>
                     <p><strong>Region:</strong> <span id="country-region"></span></p>
                     <p><strong>Subregion:</strong> <span id="country-subregion"></span></p>
@@ -40,7 +40,7 @@
         <!-- Section 2: Neighboring Countries -->
         <div id="neighboring-countries" class="row">
             <div class="col-12">
-                <h2 class="mb-4">Bordering Countries</h2>
+                <h2 class="mb-4">Neighbor Countries</h2>
                 <div class="row" id="border-countries"></div>
             </div>
         </div>

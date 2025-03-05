@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    max-width: 600px; /* Reduced container size */
+    max-width: 620px; /* Updated container size */
     margin: auto;
 }
 
@@ -40,23 +40,54 @@ body {
 }
 
 .card img {
-    max-height: 8rem;
+    max-height: 9rem; /* Updated max-height */
     width: 100%; /* Ensures all flags have the same width */
     object-fit: contain;
 }
 
+.col-7 {
+    padding: 0; /* Removed padding for .col-7 */
+}
+
 .btn-primary.btn-sm, .btn-secondary.btn-sm {
     background: white;
-    border: 2px solid blue;
+    border: 3px solid blue; /* Updated border width */
     color: blue;
-    height: 2.5rem;
-    width: 6.7rem;
+    height: 2.7rem; /* Updated height */
+    width: 8.7rem; /* Updated width */
+    font-size: 17px; /* Set font size for buttons */
 }
 
 .btn-secondary.btn-sm {
-    margin-left: 1rem;
+    margin-left: 1.4rem; /* Updated margin for secondary button */
 }
 
 .mt-auto {
     margin-left: 10px;
+}
+
+.date-time-text {
+    margin-bottom: 5px; /* Set bottom margin for date and time text */
+}
+.card-text{
+    margin-bottom: 5px;
+}
+.card-text:last-child {
+    margin-bottom: 5px !important;
+}
+
+.country-info p {
+    margin-bottom: 5px; /* Consistent margin for country info */
+}
+
+.position-relative {
+    position: relative; /* For positioning the country name over the flag */
+}
+
+#country-name {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    color: rgb(0, 0, 0); /* Change to white for better visibility */
+   
 }
