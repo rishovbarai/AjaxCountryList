@@ -86,7 +86,7 @@ body {
 
 #country-name {
     position: absolute;
-    top: 20px; /* Adjusted to move it down */
+    top: 13px; /* Adjusted to move it down */
     left: 10px; /* Keep it the same or adjust as needed */
     color: rgb(0, 0, 0); /* Change to white for better visibility */
     padding: 5px; /* Add some padding for better readability */

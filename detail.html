@@ -8,37 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="detail-container mt-5">
+    <div class="detail-container mt-5" style="border: 1px solid #e4e4e4; width: 80rem; left: 4rem; position: relative; box-shadow: 0 4px 8px rgb(208, 208, 208, 0.5);">
+        <!-- Country Name Header -->
+        <h1 id="country-name" class="text-center mb-4" style="color: rgb(0, 0, 0); left: 5.7rem;"></h1>
+        
         <!-- Section 1: Flag and Country Details -->
-        <div class="d-flex mb-5">
+        <div class="d-flex mb-5" style="top: 1rem; position: relative; padding: 35px;">
             <!-- Big Flag -->
             <div class="flex-fill">
-                <div class="position-relative">
-                    <img id="country-flag" class="img-fluid" style="width: 100%; height: 500px; object-fit: contain; border-radius: 8px;" />
-                    <h1 id="country-name" class="position-absolute" style="top: 10px; left: 10px; color: rgb(0, 0, 0);"></h1>
-                </div>
+                <img id="country-flag" class="img-fluid" style="width: 57%; height: 350px; object-fit: contain; border-radius: 8px; left: 4rem; position: relative;" />
             </div>
             
             <!-- Country Details -->
             <div class="col-md-4">
-                <div class="country-info">
-                    <p><strong>Native Name:</strong> <span id="country-native-name"></span></p>
-                    <p><strong>Capital:</strong> <span id="country-capital"></span></p>
-                    <p><strong>Region:</strong> <span id="country-region"></span></p>
-                    <p><strong>Subregion:</strong> <span id="country-subregion"></span></p>
-                    <p><strong>Languages:</strong> <span id="country-languages"></span></p>
-                    <p><strong>Latitude and Longitude:</strong> <span id="country-latlng"></span></p>
-                    <p><strong>Area:</strong> <span id="country-area"></span> km²</p>
-                    <p><strong>Demonyms:</strong> <span id="country-demonyms"></span></p>
-                    <p><strong>Currency:</strong> <span id="country-currency"></span></p>
-                    <p><strong>Time:</strong> <span id="country-time"></span></p>
-                    <p><strong>Population:</strong> <span id="country-population"></span></p>
+                <div class="country-info" style="right: 14rem; position: relative; top: 0.8rem; line-height: 1.7;">
+                    <p>Native Name: <span id="country-native-name"></span></p>
+                    <p>Capital: <span id="country-capital"></span></p>
+                    <p>Region: <span id="country-region"></span></p>
+                    <p>Subregion: <span id="country-subregion"></span></p>
+                    <p>Languages: <span id="country-languages"></span></p>
+                    <p>Latitude and Longitude: <span id="country-latlng"></span></p>
+                    <p>Area: <span id="country-area"></span> km²</p>
+                    <p>Demonyms: <span id="country-demonyms"></span></p>
+                    <p>Currency: <span id="country-currency"></span></p>
+                    <p>Time: <span id="country-time"></span></p>
+                    <p>Population: <span id="country-population"></span></p>
                 </div>
             </div>
         </div>
 
         <!-- Section 2: Neighboring Countries -->
-        <div id="neighboring-countries" class="row">
+        <div id="neighboring-countries" class="row" style="padding: 40px; margin: 60px; border: 1px solid black;">
             <div class="col-12">
                 <h2 class="mb-4">Neighbor Countries</h2>
                 <div class="row" id="border-countries"></div>
