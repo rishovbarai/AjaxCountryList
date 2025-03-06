@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const countryTime = document.getElementById('country-time');
     const countryPopulation = document.getElementById('country-population');
     const borderCountries = document.getElementById('border-countries');
+    const loader = document.createElement('div'); // Create a loader element
+    loader.textContent = 'Loading country details...'; // Loader message
+    loader.classList.add('loader'); // Add a class for styling
+    document.body.appendChild(loader); // Append loader to the body
 
     fetch(`https://restcountries.com/v3.1/alpha/${countryCode}`)
         .then(response => {
@@ -85,5 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error fetching country details:', error);
             if (countryName) countryName.textContent = 'Error loading country details';
+        })
+        .finally(() => {
+            document.body.removeChild(loader); // Remove loader after fetching is done
         });
 });

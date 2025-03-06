@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <p class="card-text mb-1">Currency: ${country.currencies ? Object.values(country.currencies)[0].name : 'N/A'} (${country.currencies ? Object.values(country.currencies)[0].symbol : 'N/A'})</p>
                                 <p class="card-text">Current date and time: <span>${currentDateTime}</span></p>
                             </div>
-                            <div class="mt-auto">
+                            <div style="margin-top: 10px;margin-left: 10px;">
                                 <button class="btn btn-primary btn-sm mr-2" onclick="showMap('${country.maps.googleMaps}')"><strong>Show Map</strong></button>
                                 <button class="btn btn-secondary btn-sm" onclick="showDetails('${country.cca3}')"><strong>Details</strong></button>
                             </div>

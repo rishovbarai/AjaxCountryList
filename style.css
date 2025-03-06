@@ -23,7 +23,7 @@ body {
 }
 
 .custom-card {
-    width: 100%; /* Adjusted to fit the container */
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -35,31 +35,38 @@ body {
 .card-body {
     flex: 1;
     display: flex;
-    padding: 13px;
-    padding-bottom: 20px; /* Added padding under time */
+    padding: 11px;
 }
 
+/* Flag container styles */
+.flex-fill.d-flex {
+    width: 280px; /* Fixed width for flag container */
+    height: 125px;/* Fixed height for flag container */
+    padding: 0;
+}
+
+/* Flag image styles */
 .card img {
-    max-height: 9rem; /* Updated max-height */
-    width: 100%; /* Ensures all flags have the same width */
-    object-fit: contain;
+    height: 147px;		
+    object-fit: fill;
+    border: 1px solid grey;
+    margin: 0;
+    padding: 0;
+    top: 17px;
+    position: relative;
 }
 
 .col-7 {
-    padding: 0; /* Removed padding for .col-7 */
+   padding:0
 }
 
 .btn-primary.btn-sm, .btn-secondary.btn-sm {
     background: white;
-    border: 3px solid blue; /* Updated border width */
+    border: 3px solid blue;
     color: blue;
-    height: 2.7rem; /* Updated height */
-    width: 8.7rem; /* Updated width */
-    font-size: 17px; /* Set font size for buttons */
-}
-
-.btn-secondary.btn-sm {
-    margin-left: 1.4rem; /* Updated margin for secondary button */
+    height: 3.1rem;
+    width: 9.5rem;
+    font-size: 17px;
 }
 
 .mt-auto {
@@ -94,16 +101,6 @@ body {
 
 }
 
-/* Country Flag Styles */
-#country-flag {
-    width: 100%; /* Make the flag responsive */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 400px; /* Set a maximum height for larger screens */
-    object-fit: contain; /* Ensure the flag fits within the container */
-    border-radius: 8px; /* Optional: rounded corners for aesthetics */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
-}
-
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 1200px) {
     .detail-container {
@@ -132,11 +129,6 @@ body {
         border: none; /* Ensure no border is applied */
     }
 
-    .country-info {
-        right: 0 !important; /* Adjust position */
-        margin-top: 1rem !important; /* Add margin for spacing */
-    }
-
     #neighboring-countries {
         margin: 20px !important; /* Adjust margins */
         padding: 20px !important; /* Adjust padding */
@@ -151,6 +143,12 @@ body {
         width: 100%; /* Make buttons full width on mobile */
         margin: 0.5rem 0; /* Add vertical spacing between buttons */
         font-size: 16px; /* Adjust font size for better readability */
+    }
+
+    .flex-fill.d-flex,
+    .card img {
+        width: 280px;
+        height: 147px;
     }
 }
 
