@@ -64,17 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             .filter(neighbor => neighbor !== null)
                             .forEach(neighbor => {
                                 const neighborCard = document.createElement('div');
-                                neighborCard.classList.add('col-md-3', 'mb-4');
+                                neighborCard.classList.add('col-md-4', 'mb-4');
                                 
                                 neighborCard.innerHTML = `
                                     <a href="detail.html?country=${neighbor.cca3}" class="text-decoration-none">
-                                        <div class="card h-100">
-                                            <img src="${neighbor.flags.png}" alt="${neighbor.name.common}" class="card-img-top" style="height: 150px; object-fit: cover;" />
-                                            <div class="card-body">
-                                                <h5 class="card-title">${neighbor.name.common}</h5>
-                                                <p class="card-text">Population: ${neighbor.population.toLocaleString()}</p>
-                                            </div>
-                                        </div>
+                                        <img src="${neighbor.flags.png}" alt="${neighbor.name.common}" class="img-fluid" style="height: 200px; width: 300px; object-fit: cover;" />
                                     </a>
                                 `;
                                 borderCountries.appendChild(neighborCard);
@@ -84,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 const noNeighborsMsg = document.createElement('div');
                 noNeighborsMsg.classList.add('col-12');
-                noNeighborsMsg.innerHTML = '<p>This country has no bordering countries.</p>';
+                noNeighborsMsg.innerHTML = '<p>This country has no neighboring countries.</p>';
                 borderCountries.appendChild(noNeighborsMsg);
             }
         })
